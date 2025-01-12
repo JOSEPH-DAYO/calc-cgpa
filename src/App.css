@@ -1,0 +1,192 @@
+/* App.css */
+
+.App {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f5f5f5;
+  /* Light background color for a professional look */
+  text-align: center;
+  /* Center the content */
+}
+
+.year {
+  margin-bottom: 30px;
+}
+
+.semesters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.semester {
+  flex: 1 1 calc(50% - 20px);
+  /* Adjust for two columns layout */
+  background-color: #ffffff;
+  /* White background for semester cards */
+  margin: 10px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.subject {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+  /* Add space between subjects */
+  align-items: center;
+}
+
+.subject-label {
+  font-weight: bold;
+  width: 100%;
+}
+
+input,
+select {
+  padding: 18px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1 1 30%;
+  min-width: 150px;
+}
+
+input.unit {
+  flex: 1 1 7.5%;
+  /* Resize unit container to be one-fourth the size of the grade container */
+  min-width: 50px;
+}
+
+button {
+  padding: 16px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button.add-subject {
+  background-color: #28a745;
+  /* Green background for Add Subject button */
+  color: white;
+  width: 100%;
+  margin-top: 10px;
+}
+
+button.add-subject:hover {
+  background-color: #218838;
+}
+
+button.remove-subject {
+  background-color: #dc3545;
+  /* Red background for Remove button */
+  color: white;
+  width: auto;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+button.remove-subject:hover {
+  background-color: #c82333;
+}
+
+button.remove-semester {
+  background-color: #c82333;
+  color: #edeaea;
+}
+
+button.remove-semester:hover {
+  background-color: #8a1723;
+  color: #ffffff;
+}
+
+.large {
+  background-color: #28a745;
+  color: #ffffff;
+}
+
+.large:hover {
+  background-color: #218838;
+  color: black;
+}
+
+h1,
+h2,
+h3 {
+  color: #333;
+}
+
+h1 {
+  margin-bottom: 30px;
+  /* Add some spacing below the title */
+}
+
+h2 {
+  margin-top: 20px;
+}
+
+p {
+  margin: 5px 0;
+}
+
+.cgpa-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.gpa,
+.cgpa {
+  color: #333;
+  /* Darker color for CGPA */
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  /* Center the buttons */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+button.large {
+  padding: 20px 30px;
+  /* Make the buttons bigger */
+  font-size: 18px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .semester {
+    flex: 1 1 100%;
+    /* Full width on small screens */
+  }
+
+  .subject {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  button.add-subject,
+  button.remove-subject {
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .semester {
+    flex: 1 1 calc(33.33% - 20px);
+    /* Three columns layout */
+  }
+}
