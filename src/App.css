@@ -89,6 +89,7 @@ button.remove-subject {
   width: auto;
   padding: 10px;
   margin-left: 10px;
+  margin-right: 10px;
 }
 
 button.remove-subject:hover {
